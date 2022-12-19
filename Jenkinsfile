@@ -11,7 +11,7 @@ pipeline {
         }
         stage('docker image build') {
             steps {
-                sh 'docker image build -t sandeepreddy/saleor-dashboar:DEV .'
+                sh 'docker image build -t 8465824520/image:tagname' .'
             }
         }
         stage('push image to registry') {
