@@ -11,12 +11,12 @@ pipeline {
         }
         stage('docker image build') {
             steps {
-                sh 'docker image build -t 8465824520/saleor-dashboard:Dev .'
+                sh 'docker image build -t 8465824520/saleor-dashboard:tagname .'
             }
         }
         stage('push image to registry') {
             steps {
-                sh 'docker image push 8465824520/saleor-dashboard:DEV'
+                sh 'docker image push 8465824520/saleor-dashboard:tagname'
             }
         }
     }
