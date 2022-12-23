@@ -20,6 +20,9 @@ pipeline {
             }
         }
         stage('terraform') {
+            agent{
+                labels ('jenkins')
+            }    
             steps {
                 git clone https: //github.com/hashicorp/learn-terraform-provision-eks-cluster
                     sh.'terraform init'
