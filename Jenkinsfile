@@ -19,15 +19,5 @@ pipeline {
                 sh 'docker image push 8465824520/saleor:DEV'
             }
         }
-        stage('terraform') {
-            agent{
-                labels ('jenkins')
-            }    
-            steps {
-                git clone https: //github.com/hashicorp/learn-terraform-provision-eks-cluster
-                    sh.'terraform init'
-                    sh. 'terraform apply --auto-approve'
-            }
-        }
     }
 }
